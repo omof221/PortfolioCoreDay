@@ -1,0 +1,19 @@
+﻿@model List<Education>
+<div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+@foreach(var item in Model)
+{
+    <h3 class="resume-title">Education</h3>
+<div class="resume-item">
+    <h4>@item.Title</h4>
+    <h5>@item.EducationDate</h5>
+    <p><em>@item.Department</em></p>
+    <p>@item.EducationDescription</p>
+</div><!-- Edn Resume Item -->
+}
+</div>
+@* <div class="resume-item">
+    <h4>Bachelor of Fine Arts &amp; Graphic Design</h4>
+    <h5>2010 - 2014</h5>
+    <p><em>Rochester Institute of Technology, Rochester, NY</em></p>
+    <p>Quia nobis sequi est occaecati aut. Repudiandae et iusto quae reiciendis et quis Eius vel ratione eius unde vitae rerum voluptates asperiores voluptatem Earum molestiae consequatur neque etlon sader mart dila</p>
+</div><!-- Edn Resume Item --> *@

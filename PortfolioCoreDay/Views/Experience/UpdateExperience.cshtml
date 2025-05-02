@@ -1,0 +1,28 @@
+﻿@model PortfolioCoreDay.Entities.Experience
+@{
+    ViewData["Title"] = "UpdateExperience";
+    Layout = "~/Views/AdminLayoutController1/Index.cshtml";
+}
+
+<h1>Deneyim GÜncelleme Sayfası</h1>
+
+
+<form method="post">
+    <input type="hidden" asp-for="ExperienceID" />
+    <label>Başlık</label>
+    <input type="text" asp-for="Title" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Kurumunun İsmi</label>
+    <input type="text" asp-for="CompanyName" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Tarih</label>
+    <input type="text" asp-for="ExperienceDate" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Deneyim Açıklaması</label>
+    <input type="text" asp-for="Description" class="form-control" style="border:1px solid black;" />
+    <br />
+ 
+
+
+    <button class="btn btn-succes">Deneyimi Kaydet</button>
+</form>

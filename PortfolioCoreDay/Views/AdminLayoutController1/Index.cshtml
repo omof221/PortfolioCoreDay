@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!doctype html>
+<html lang="en">
+@* @Html.ActionLink("Partial1Head","AdminLayout") *@
+@Html.Partial("~/Views/AdminLayoutController1/Partial1Head.cshtml")
+
+<body>
+    
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            @Html.Partial("~/Views/AdminLayoutController1/PartalSidebarTopMenu.cshtml")
+            @* @Html.ActionLink("PartalSidebarTopMenu", "AdminLayout") *@
+            @Html.Partial("~/Views/AdminLayoutController1/PartialSidebar.cshtml")
+
+            @* @Html.ActionLink("PartialSideBar", "AdminLayout") *@
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5 pt-5">
+           @RenderBody()
+
+        </div>
+    </div>
+    @Html.Partial("~/Views/AdminLayoutController1/PartialScript.cshtml")
+
+    @* @Html.ActionLink("PartialScript", "AdminLayout") *@
+</body>
+</html>
+
+
+
+
+

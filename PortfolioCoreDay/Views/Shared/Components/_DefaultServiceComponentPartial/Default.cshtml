@@ -1,0 +1,40 @@
+﻿@model List<Service>
+
+<section id="services" class="services section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Services</h2>
+        <p> As a Full Stack .NET Developer, I provide end-to-end software solutions  from building modern web applications and designing scalable APIs, to creating responsive frontends and managing secure database integrations. I also implement authentication systems and handle application deployment with DevOps practices.</p>
+    </div><!-- End Section Title -->
+    @{
+        var aktifHizmetler = Model
+        .Where(item => item.Status == true)
+        .OrderByDescending(item => item.ServiceId) 
+        .Take(6)
+        .ToList();
+    }
+
+    <div class="container">
+        <div class="row gy-4">
+            @foreach (var item in aktifHizmetler)
+            {
+                <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="100">
+                    <div class="icon flex-shrink-0"><i class="bi bi-briefcase"></i></div>
+                    <div>
+                        <h4 class="title"><a href="service-details.html" class="stretched-link">@item.Title</a></h4>
+                        <p class="description">@item.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+
+</section><!-- /Services Section -->
+
+
+
+
+
+
+

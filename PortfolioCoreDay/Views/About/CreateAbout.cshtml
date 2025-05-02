@@ -1,0 +1,53 @@
+﻿@model PortfolioCoreDay.Entities.About
+@{
+    ViewData["Title"] = "CreateAbout";
+    Layout = "~/Views/AdminLayoutController1/Index.cshtml";
+}
+<h1>Yeni Hakkımda Girişi</h1>
+<form method="post">
+    <label>1. Hakkımda Açıklaması</label>
+    <textarea class="form-control" asp-for="AboutDescription" style="border:1px solid black;" /> </textarea>
+    <br />
+    <label>Yaş</label>
+    <input type="text" asp-for="Age" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Doğum Tarihi</label>
+    <input type="text" asp-for="Birthday" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Şehir</label>
+    <input type="text" asp-for="City" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Eğitim Durumu</label>
+    <input type="text" asp-for="Degree" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Mail</label>
+    <input type="text" asp-for="Email" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Meslek Başlığı</label>
+    <input type="text" asp-for="JobTitle" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Meslek Başlığı</label>
+    <input type="text" asp-for="JobTitle" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Meslek Başlığı Açıklaması</label>
+    <input type="text" asp-for="JobTitleDescription" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Meslek Alanı Açıklaması</label>
+    <input type="text" asp-for="LastDescription" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Tel</label>
+    <input type="text" asp-for="PhoneNumber" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Web Sitesi Linki</label>
+    <input type="text" asp-for="WebsiteUrl" class="form-control" style="border:1px solid black;" />
+    <br />
+    <button class="btn btn-primary"> Kaydet</button>
+
+
+  
+
+
+
+
+</form>
+

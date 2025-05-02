@@ -1,0 +1,37 @@
+﻿@model Education
+@{
+    ViewData["Title"] = "CreateEducation";
+    Layout = "~/Views/AdminLayoutController1/Index.cshtml";
+}
+
+<h1>Yeni Eğitim Ekleme Sayfası</h1>
+
+
+
+
+<form method="post">
+    <label>Eğitim İsmi</label>
+    <input type="text" asp-for="Title" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Eğitim Kurumunun İsmi</label>
+    <input type="text" asp-for="University" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Departman</label>
+    <input type="text" asp-for="Department" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Eğitim Tarihi</label>
+    <input type="text" asp-for="EducationDate" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Eğitim Açıklamas</label>
+    <input type="text" asp-for="EducationDescription" class="form-control" style="border:1px solid black;" />
+    <br />
+
+    <button class="btn btn-primary">Referansı Kaydet</button>
+
+
+
+
+
+
+
+</form>

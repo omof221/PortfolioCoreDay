@@ -1,0 +1,31 @@
+﻿ @model List<Myjobs>
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+
+    <img src="/iPortfolio-1.0.0/assets/img/hero-bg.jpg" alt="" data-aos="fade-in" class="">
+
+    @* <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Ömer Faruk Yaşar</h2><p><span class="typed" data-typed-items="  @foreach (var item in Model){
+        @item.JobTitle
+            }</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+            </p>
+    </div> *@
+   @*  <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Ömer Faruk Yaşar</h2>
+        <p>
+            <span class="typed" data-typed-items="@string.Join(",", Model.Select(item => item.JobTitle))"></span>
+            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+        </p>
+    </div>
+ *@
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <h2>Ömer Faruk Yaşar</h2>
+        <p>
+            <span class="typed" data-typed-items="@string.Join(",", Model.Select(item => $"I KNOW {item.JobTitle}"))"></span>
+            <span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span>
+        </p>
+    </div>
+
+
+</section><!-- /Hero Section -->
+

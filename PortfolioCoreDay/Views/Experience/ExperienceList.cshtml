@@ -1,0 +1,47 @@
+﻿@model List<Experience>
+@{
+    ViewData["Title"] = "ExperienceList";
+    Layout = "~/Views/AdminLayoutController1/Index.cshtml";
+}
+
+<h1>Deneyimlerim</h1>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Kurumunun İsmi</th>
+        <th>Tarih</th>
+       <th>Deneyim Açıklaması</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ExperienceID</td>
+            <td>@item.Title</td>
+            <td>@item.CompanyName</td>
+            <td>@item.ExperienceDate</td>
+            <td>@item.Description</td>
+           
+            <td><a href="/Experience/DeleteExperience/@item.ExperienceID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Experience/UpdateExperience/@item.ExperienceID" class="btn btn-success">Güncelle</a></td>
+
+
+
+
+
+        </tr>
+
+
+    }
+
+
+
+
+</table>
+
+<a href="/Experience/CreateExperience/" class="btn btn-primary">Yeni Yetenek Girişi</a>

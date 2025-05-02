@@ -1,0 +1,32 @@
+﻿@model List<PortfolioCoreDay.Entities.Myjobs>
+@{
+    ViewData["Title"] = "JobList";
+    Layout = "~/Views/AdminLayoutController1/Index.cshtml";
+}
+<h1>Yeni İş Girişi</h1>
+
+<table class="table table-bordered">
+
+    <tr>
+       
+        <th>İş Id</th>
+        <th>İş Başlığı</th>
+       
+
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.MyjobsId</td>
+            <td>@item.JobTitle</td>
+           
+            <td><a href="/JobController/DeleteJob/@item.MyjobsId" class="btn btn-danger">Sil</a> </td>
+            <td><a href="/JobController/UpdateJob/@item.MyjobsId" class="btn btn-success">Güncelle</a> </td> 
+
+        </tr>
+
+    }
+
+</table>
+<a href="/JobController/CreateJob/" class="btn btn-info">Yeni İş Girişi</a>
+
